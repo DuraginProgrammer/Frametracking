@@ -10,7 +10,7 @@
 		<title>Frame Tracking - Log In or Sign Up</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
-		<link href="css/myStyle.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
 
 	</head>
 
