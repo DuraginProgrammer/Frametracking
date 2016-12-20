@@ -83,8 +83,8 @@
 						</div>
 
 						<div class="form-group">
-							<label class="sr-only" for="areaCode">Area Code</label>
-							<input class="form-control" type="text" name="areaCode" placeholder="Area Code" value="<?php if (addslashes(isset($_POST['areaCode'])))echo($_POST['areaCode']); ?>" /> <br /><br />
+							<label class="sr-only" for="zipCode">Zip Code</label>
+							<input class="form-control" type="text" name="zipCode" placeholder="Zip Code" value="<?php if (addslashes(isset($_POST['zipCode'])))echo($_POST['zipCode']); ?>" /> <br /><br />
 						</div>
 
 						<div class="form-group">
