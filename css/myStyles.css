@@ -1,0 +1,105 @@
+body{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#3F3333;
+	background-color:white;
+}
+
+.container {
+	padding:30px;
+}
+
+#homeNavigationBar {
+	margin-top:10px;
+	background-color:lightgrey;
+	border: 1px solid black;
+	margin-bottom:50px;
+}
+
+#homeNavigationBar ul {
+	list-style:none;
+	margin:10px;
+	text-align:right;
+	padding-top:5px;
+}
+
+#homeNavigationBar li {
+	font-size:16px;
+	margin-right:20px;
+	display:inline;
+}
+
+#homeBusinessLogIn {
+	float:left;
+	border-radius:10%;
+	font-size:16px;
+}
+
+#homeBusinessLogIn input{
+	border-radius:10px;
+	padding:3px;
+	margin:0 10px;
+	outline:none;
+}
+
+#homeLogIn {
+	color:#5CAF65;
+	margin-left:8px;
+
+}
+
+.floatLeft{
+	float:left;
+}
+
+.clear {
+	clear:both;
+}
+
+#pitch {
+	font-size:2em;
+	float:left;
+	width:15em;
+	margin-right:3.75em;
+	margin-top:30px;
+}
+
+#pitch a {
+	border-bottom:black 5px solid;
+}
+
+#signUpText {
+	font-size:35px;
+	font-weight:bold;
+	position:relative;
+	left:150px;
+	color:#5CAF65;
+}
+
+#signUpForm {
+	background-color:#2b2828;
+	width:520px;
+	float:left;
+	border:5px solid black;
+	padding:20px;
+	margin-top:40px;
+}
+
+#signUpForm input	{
+	width:200px;
+	margin-left:20px;
+	font-size:1.2em;
+}
+
+#signUpForm label	{
+	width:200px;
+	margin-left:20px;
+	font-size:1.2em;
+}
+
+#continue {
+	margin-left:20px;
+	position:relative;
+	top:-9px;
+	font-size:1.2em;
+	font-weight:bold;
+}

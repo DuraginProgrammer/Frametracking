@@ -1,40 +1,20 @@
 <?php
 	session_start();
 	include("php/connection.php");
+	include("php/function.php");
 
-	// Empty variables.
-	$link = $error = $city = $state = $areaCode = $email = $phone = $password = $re_enterPassword = "";
 
-	// form validation
-
-	if ($_SERVER['REQUEST_METHOD'] == "POST") {
-
-		$business = validate($_POST['business']);
-		$address = validate($_POST['address']);
-		$city= validate($_POST['city']);
-		$state = validate($_POST['state']);
-		$zipCode = validate($_POST['zipCode']);
-		$email = validate($_POST['email']);
-		$phone = validate($_POST['phone']);
-		$password = validate($_POST['password']);
-		$re_enterPassword = validate($_POST['re-enterPassword']);
-	}
-
-	function validate($data) {
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
+	//mysqli_real_escape_string for all data inputs
 	// Sign up handling.
-	if (isset($_POST['submitted'])) { /*
+	if (isset($_POST['submitted'])) {
 
 		if (!$_POST['business']) {
-
 			$error.="<br />Please enter the name of your business.";
 
+		} else if (strlen($_POST['business']) > 30) {
+			$error.="<br />Maximum character size reached.";
 		}
-
+		/*
 		if (!$_POST['address']) {
 
 			$error.="<br />Please enter your business address.";
@@ -112,10 +92,8 @@
 				echo "The email address you've entered is already registered.";
 
 			} else {
-			// ****REMEMBER to finish sign up values
-			// ****Understand mysqli Injections
-				$query="INSERT INTO `business` (`businessEmail`, `businessPassword`) VALUES ('".mysqli_real_escape_string($link, $_POST['email'])."','" .md5(md5($_POST['email']).$_POST['password'])."')";
-
+			// #111111111111# finish sign up values
+				$query="INSERT INTO `business` (`businessName`, `businessAddress`, `businessCity`, `businessState`, `businessZip`, `businessEmail`, `businessPhone`, `businessPassword`) VALUES ('$business', '$address', '$city', '$state', '$zipCode', '$email', '$phone', '$password')";
 				mysqli_query($link,$query);
 
 				echo "Sign up succesful.";
