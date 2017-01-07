@@ -10,7 +10,7 @@
 		<title>Frame Tracking - Log In or Sign Up</title>
 
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
-		<link href="css/style.css" rel="stylesheet" />
+		<link href="css/myStyles.css" rel="stylesheet" />
 
 	</head>
 
@@ -64,42 +64,50 @@
 
 						<div class="form-group">
 							<label class="sr-only" for="business">Business</label>
-							<input class="form-control" type="text" name="business" placeholder="Business" value="<?php if (addslashes(isset($_POST['business'])))echo($_POST['business']); ?>" /> <br /><br />
+							<input id="inputBusiness" onkeyup="validateBusiness()" class="form-control" type="text" name="business" placeholder="Business" value="<?php if (isset($_POST['business']))echo($_POST['business']); ?>" /> <br />
+							<label id="inputBusinessPrompt"></label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="address">Address</label>
-							<input class="form-control" type="text" name="address" placeholder="Address" value="<?php if (addslashes(isset($_POST['address'])))echo($_POST['address']); ?>" /> <br /><br />
+							<input class="form-control" type="text" name="address" placeholder="Address" value="<?php if (isset($_POST['address']))echo($_POST['address']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="city">City</label>
-							<input class="form-control" type="text" name="city" placeholder="City" value="<?php if (addslashes(isset($_POST['city'])))echo($_POST['city']); ?>" /> <br /><br />
+							<input class="form-control" type="text" name="city" placeholder="City" value="<?php if (isset($_POST['city']))echo($_POST['city']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="state">State</label>
-							<input class="form-control" type="text" name="state" placeholder="State" value="<?php if (addslashes(isset($_POST['state'])))echo($_POST['state']); ?>" /> <br /><br />
+							<input class="form-control" type="text" name="state" placeholder="State" value="<?php if (isset($_POST['state']))echo($_POST['state']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="zipCode">Zip Code</label>
-							<input class="form-control" type="text" name="zipCode" placeholder="Zip Code" value="<?php if (addslashes(isset($_POST['zipCode'])))echo($_POST['zipCode']); ?>" /> <br /><br />
+							<input class="form-control" type="text" name="zipCode" placeholder="Zip Code" value="<?php if (isset($_POST['zipCode']))echo($_POST['zipCode']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="email">Email</label>
-							<input class="form-control" type="email" name="email" placeholder="Email" value="<?php if (addslashes(isset($_POST['email'])))echo($_POST['email']); ?>" /> <br /><br />
+							<input class="form-control" type="email" name="email" placeholder="Email" value="<?php if (isset($_POST['email']))echo($_POST['email']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="phone">Phone</label>
-							<input class="form-control" type="text" name="phone" placeholder="Phone" value="<?php if (addslashes(isset($_POST['phone'])))echo($_POST['phone']); ?>" /> <br /><br />
+							<input class="form-control" type="text" name="phone" placeholder="Phone" value="<?php if (isset($_POST['phone']))echo($_POST['phone']); ?>" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
 							<label class="sr-only" for="password">Password</label>
-							<input class="form-control" type="password" name="password" placeholder="Password" /> <br /><br />
+							<input class="form-control" type="password" name="password" placeholder="Password" /> <br />
+							<label style="color:red">Frametracking validation area</label>
 						</div>
 
 						<div class="form-group">
@@ -111,12 +119,12 @@
 						<input type="submit" name="submit" class="btn btn-success" id="continue" value="Continue" />
 
 					</form>
-
 			</div>
 			</div>
 
 		</div>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="js/myJavascript.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 
