@@ -4,7 +4,7 @@ function validateBusiness() {
   var business = document.getElementById("inputBusiness").value;
 
   if (business.length == 0) {
-    producePrompt("Required", "inputBusinessPrompt", "green");
+    producePrompt("Required", "inputBusinessPrompt", "white");
     return false;
   }
 

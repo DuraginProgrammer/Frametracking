@@ -124,7 +124,7 @@
 
 		</div>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		<script type="text/javascript" src="js/myJavascript.js"></script>
+		<script type="text/javascript" src="js/javascript.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 
